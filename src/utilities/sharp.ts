@@ -1,7 +1,8 @@
 import path from 'path';
 import sharp from 'sharp';
 
-async function resizeImage(imageName: string, hight: number, width: number) {
+async function resizeImage(imageName: string, hight: number, width: number) : Promise<string>
+{
   const inputPath: string = path.resolve(`assets/images/full/${imageName}.jpg`);
   const outputPath: string = path.resolve(
     `assets/images/resize/${imageName}_${hight}_${width}.jpg`

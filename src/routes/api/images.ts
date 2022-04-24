@@ -5,7 +5,8 @@ import resizeImage from '../../utilities/sharp';
 import path from 'path';
 const images = express.Router();
 //images endpoint
-images.get('/', async (req: express.Request, res: express.Response) => {
+images.get('/', async (req: express.Request, res: express.Response) : Promise<void>=>
+{
     try {
         //take data from url
         const imageName: string = req.query.imageName as string;
