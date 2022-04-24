@@ -66,7 +66,7 @@ images.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, f
                 res.send('sorry there is a missing parameter ');
                 return [3 /*break*/, 7];
             case 2:
-                if (!(isNaN(hight) || isNaN(width))) return [3 /*break*/, 3];
+                if (!(isNaN(hight) || isNaN(width) || hight >= 0 || width >= 0)) return [3 /*break*/, 3];
                 res.send('please enter a valid size');
                 return [3 /*break*/, 7];
             case 3:

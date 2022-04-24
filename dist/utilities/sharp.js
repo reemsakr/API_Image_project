@@ -49,7 +49,10 @@ function resizeImage(imageName, hight, width) {
                 case 0:
                     inputPath = path_1.default.resolve("assets/images/full/".concat(imageName, ".jpg"));
                     outputPath = path_1.default.resolve("assets/images/resize/".concat(imageName, "_").concat(hight, "_").concat(width, ".jpg"));
-                    return [4 /*yield*/, (0, sharp_1.default)(inputPath).resize(width, hight).toFile(outputPath).then(function () {
+                    return [4 /*yield*/, (0, sharp_1.default)(inputPath)
+                            .resize(width, hight)
+                            .toFile(outputPath)
+                            .then(function () {
                             return "assets/images/resize/".concat(imageName, "_").concat(hight, "_").concat(width, ".jpg");
                         })
                             .catch(function (err) {

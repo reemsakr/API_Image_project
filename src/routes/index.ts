@@ -4,12 +4,12 @@ import express from 'express';
 import images from './api/images';
 
 // root route
-const routes=express.Router();
+const routes = express.Router();
 // endpoint
-routes.get('/',(req:express.Request,res:express.Response):void=>{
-res.send('welcome to Image processing API application.');
+routes.get('/', (req: express.Request, res: express.Response): void => {
+  res.send('welcome to Image processing API application.');
 });
 //path to images as a midleware
-routes.use('/images',images);
+routes.use('/images', images);
 
 export default routes;
